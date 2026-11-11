@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Guru | SKORIN</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-role="guru" data-page="dashboard">
+  <aside class="sidebar" id="sidebar" aria-label="Menu utama"></aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div>
+        <div class="crumb">DASHBOARD GURU</div>
+        <h1>Selamat datang, <span data-user-name>Guru</span> 👋</h1>
+      </div>
+    </header>
+    <section class="content">
+      <div class="hero">
+        <div>
+          <h2>Ringkasan kondisi pembelajaran</h2>
+          <p>Pantau performa kelas, temukan siswa yang membutuhkan perhatian, dan gunakan data untuk menentukan langkah pembelajaran berikutnya.</p>
+        </div>
+        <span class="pill">Ganjil 2026/2027</span>
+      </div>
+      <div class="actions">
+        <a class="action" href="input-nilai.html"><div class="action-icon">+</div><div><b>Tambah Nilai</b><span>Input nilai siswa</span></div><span class="arrow">→</span></a>
+        <a class="action" href="kelas-siswa.html"><div class="action-icon">♙</div><div><b>Kelola Siswa</b><span>Tambah, cari, hapus</span></div><span class="arrow">→</span></a>
+        <a class="action" href="analisis.html"><div class="action-icon">◉</div><div><b>Analisis Kelas</b><span>Lihat perkembangan</span></div><span class="arrow">→</span></a>
+        <a class="action" href="simulasi.html"><div class="action-icon">◇</div><div><b>Simulasi</b><span>Coba skenario nilai</span></div><span class="arrow">→</span></a>
+      </div>
+      <div class="stats">
+      <div class="card"><div class="stat-head"><span>Total Siswa</span><i class="stat-icon">♙</i></div><h3 id="statTotal">–</h3><p id="statTotalNote"></p></div>
+      <div class="card"><div class="stat-head"><span>Rata-rata Kelas</span><i class="stat-icon">◉</i></div><h3 id="statAvg">–</h3><p id="statAvgNote"></p></div>
+      <div class="card"><div class="stat-head"><span>Ketuntasan</span><i class="stat-icon">✓</i></div><h3 id="statTuntas">–</h3><p id="statTuntasNote"></p></div>
+      <div class="card"><div class="stat-head"><span>Perlu Perhatian</span><i class="stat-icon">!</i></div><h3 id="statRisk">–</h3><p id="statRiskNote"></p></div>
+      </div>
+      <div class="grid">
+        <div class="panel">
+          <div class="panel-head"><div><h3>Performa Kelas</h3><p>Rata-rata nilai per komponen penilaian</p></div></div>
+          <div class="chart" id="chart"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><h3>Perlu Perhatian</h3><p>Prioritas pendampingan</p></div><a href="rekomendasi.html" class="pill">Lihat semua</a></div>
+          <div class="students" id="watchlist"></div>
+        </div>
+      </div>
+      <div class="insight">
+        <div class="spark">✦</div>
+        <div><b id="insightTitle">SKORIN</b><p id="insightText"></p></div>
+        <a class="btn-link" href="analisis.html">Lihat Analisis →</a>
+      </div>
+    </section>
+  </main>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/guru-dashboard.js"></script>
+</body>
+</html>

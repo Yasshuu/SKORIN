@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Input Nilai | SKORIN</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-role="guru" data-page="input">
+  <aside class="sidebar" id="sidebar" aria-label="Menu utama"></aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div>
+        <div class="crumb">AKADEMIK / INPUT NILAI</div>
+        <h1>Input Nilai Siswa</h1>
+      </div>
+    </header>
+    <section class="content">
+      <div class="hero">
+        <div>
+          <h2>Hitung dan simpan nilai akhir</h2>
+          <p>Masukkan komponen penilaian. Nilai akhir, predikat, dan status ketuntasan dihitung otomatis, lalu tersimpan dan langsung tampil di dashboard, analisis, dan rekomendasi.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <p class="empty" id="emptyNote" hidden>Belum ada siswa. Tambahkan dulu lewat menu Kelas &amp; Siswa.</p>
+        <form id="nilaiForm" novalidate>
+          <div class="form-grid">
+            <div class="field"><label>Nama siswa<select id="student"></select></label></div>
+          <div class="field"><label>Tugas (20%)<input id="tugas" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+          <div class="field"><label>UH (25%)<input id="uh" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+          <div class="field"><label>UTS (25%)<input id="uts" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+          <div class="field"><label>UAS (30%)<input id="uas" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+            <div class="field"><label>KKM<select id="kkm"><option value="70">70</option><option value="75">75</option><option value="80">80</option></select></label></div>
+          </div>
+          <p class="form-error" id="formError" role="alert"></p>
+          <button class="primary" type="submit" style="margin-top:12px">Hitung &amp; Simpan Nilai →</button>
+        </form>
+        <div id="result" class="result-box" hidden></div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/input-nilai.js"></script>
+</body>
+</html>

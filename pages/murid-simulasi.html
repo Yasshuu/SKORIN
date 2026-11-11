@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulasi Target | SKORIN</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-role="murid" data-page="simulasi">
+  <aside class="sidebar" id="sidebar" aria-label="Menu utama"></aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div>
+        <div class="crumb">BELAJAR / SIMULASI</div>
+        <h1>Simulasi Target</h1>
+      </div>
+    </header>
+    <section class="content">
+      <div class="hero">
+        <div>
+          <h2>“Kalau nilai UAS saya 90, jadi berapa?”</h2>
+          <p>Ubah komponen nilai dan lihat dampaknya langsung. Hasilnya menampilkan UAS yang dibutuhkan untuk mencapai target.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="form-grid">
+          <div class="field"><label>Tugas (20%)<input id="t" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+          <div class="field"><label>UH (25%)<input id="u" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+          <div class="field"><label>UTS (25%)<input id="s" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+          <div class="field"><label>UAS (30%)<input id="a" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+          <div class="field"><label>Target nilai akhir<input id="target" type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="0–100"></label></div>
+        </div>
+        <p class="muted" id="simNote" style="margin-top:10px"></p>
+        <div id="result" class="result-box" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/simulasi.js"></script>
+</body>
+</html>

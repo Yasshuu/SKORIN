@@ -1,0 +1,61 @@
+/* Komponen tambahan Smart Score (dimuat SETELAH app.css / auth.css) */
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Fokus keyboard yang terlihat */
+:focus-visible { outline: 3px solid #8f8cf5; outline-offset: 2px; }
+.field input:focus-visible, .field select:focus-visible, .input:focus-visible,
+.auth-card input:focus-visible { outline: 3px solid #8f8cf5; outline-offset: 0; border-color: #5b57df; }
+
+/* Sidebar & menu mobile */
+.sidebar { overflow-y: auto; }
+.backdrop { display: none; position: fixed; inset: 0; background: #0006; z-index: 15; }
+.backdrop.show { display: block; }
+@media (min-width: 761px) { .backdrop.show { display: none; } }
+
+/* Navigasi berupa <a> (bukan button) */
+a.action, a.pill { text-decoration: none; color: inherit; }
+.insight .btn-link { margin-left: auto; background: #5b57df; color: #fff; border-radius: 9px; padding: 9px 12px; font-size: 12px; text-decoration: none; white-space: nowrap; }
+@media (max-width: 760px) { .insight .btn-link { margin-left: 51px; } }
+
+/* Grafik */
+.chart { height: auto; border-bottom: 0; }
+.chart svg { height: auto; max-width: 100%; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #555; margin-top: 8px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+
+/* Tabel */
+.panel + .panel { margin-top: 15px; }
+.table-wrap { overflow-x: auto; }
+.table-wrap .table { min-width: 640px; }
+.table th, .table td { font-size: 12px; }
+.bar { height: 8px; min-width: 90px; background: #ecebff; border-radius: 6px; overflow: hidden; }
+.bar span { display: block; height: 100%; background: #5b57df; }
+.link-btn { border: 0; background: none; color: #5550d5; font-size: 12px; font-weight: 700; cursor: pointer; text-decoration: none; padding: 4px 6px; }
+.link-btn:hover { text-decoration: underline; }
+.link-btn.danger { color: #dc3b3b; }
+
+/* Form */
+.field label { font-size: 12px; }
+.field input, .field select { font-size: 14px; }
+.form-error { color: #c62828; font-size: 13px; margin-top: 12px; min-height: 1em; }
+.form-info { color: #5550d5; font-size: 13px; margin-top: 12px; }
+.auth-card .form-error, .auth-card .form-info { min-height: 1.2em; }
+.demo-note code { background: #ebebf3; padding: 1px 5px; border-radius: 5px; }
+.text-link { border: 0; background: none; padding: 0; color: #5b57d8; font-size: inherit; cursor: pointer; }
+.hero .toolbar { margin-bottom: 0; }
+.score-big small { font-size: 16px; font-weight: 600; }
+
+/* Dialog tambah siswa */
+dialog { border: 0; border-radius: 15px; padding: 22px; width: min(420px, 92vw); box-shadow: 0 20px 60px #0004; }
+dialog::backdrop { background: #0007; }
+dialog h3 { margin-bottom: 14px; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+/* Notifikasi */
+.toast { position: fixed; right: 18px; bottom: 18px; z-index: 50; background: #17162f; color: #fff; padding: 12px 16px; border-radius: 11px; font-size: 13px; box-shadow: 0 10px 30px #0004; }
+
+/* Rekomendasi */
+.recommend .card h4 { font-size: 14px; }
+.recommend .card p { font-size: 12px; }
+.plain-list { margin: 8px 0 0 16px; font-size: 12px; line-height: 1.7; color: #555; }

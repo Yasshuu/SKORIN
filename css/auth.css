@@ -1,0 +1,956 @@
+/* =====================================================
+   SKORIN — AUTHENTICATION PAGE
+===================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #181927;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+.auth-body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(105, 96, 255, 0.08),
+      transparent 30%
+    ),
+
+    #f7f7fb;
+}
+
+
+/* =====================================================
+   MAIN SHELL
+===================================================== */
+
+.auth-shell {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(420px, 0.92fr);
+}
+
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.auth-visual {
+
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 100vh;
+
+  padding:
+    38px
+    clamp(40px, 7vw, 100px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  color: white;
+
+  background:
+
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(121, 112, 255, 0.30),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(99, 82, 210, 0.25),
+      transparent 30%
+    ),
+
+    #17162f;
+}
+
+
+/* decorative circles */
+
+.auth-visual::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  right: -220px;
+  top: -220px;
+
+  background: #6c63ff;
+
+  opacity: 0.08;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+}
+
+
+.auth-visual::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  left: -220px;
+  bottom: -220px;
+
+  background: #847cff;
+
+  opacity: 0.07;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* Logo wrapper */
+
+.brand-logo-wrap {
+
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,0.12);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.20);
+}
+
+
+/* Logo image */
+
+.brand-logo {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* Brand text */
+
+.brand-text b {
+
+  display: block;
+
+  font-size: 18px;
+
+  font-weight: 850;
+
+  letter-spacing: -0.5px;
+}
+
+
+.brand-text small {
+
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  color: #aaa9c2;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.eyebrow {
+
+  display: inline-block;
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.7px;
+
+  color: #706cf2;
+}
+
+
+.auth-visual .eyebrow {
+
+  color: #aaa7ff;
+}
+
+
+/* =====================================================
+   VISUAL COPY
+===================================================== */
+
+.visual-copy {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 700px;
+}
+
+
+.visual-copy h1 {
+
+  margin:
+    18px 0;
+
+  font-size:
+    clamp(40px, 5vw, 70px);
+
+  line-height: 1.01;
+
+  letter-spacing: -3.5px;
+}
+
+
+.visual-copy h1 em {
+
+  font-style: normal;
+
+  color: #aaa6ff;
+}
+
+
+.visual-copy p {
+
+  max-width: 590px;
+
+  color: #b8b7ca;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   MINI INSIGHTS
+===================================================== */
+
+.mini-insights {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  gap: 12px;
+}
+
+
+.mini-card {
+
+  min-width: 150px;
+
+  padding: 16px 18px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.10);
+
+  border-radius: 15px;
+
+  background:
+    rgba(255,255,255,0.055);
+
+  backdrop-filter: blur(15px);
+}
+
+
+.mini-card b {
+
+  display: block;
+
+  font-size: 22px;
+
+  letter-spacing: -0.5px;
+}
+
+
+.mini-card span {
+
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  color: #aaa9bd;
+}
+
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.auth-panel {
+
+  min-height: 100vh;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 35px;
+}
+
+
+/* =====================================================
+   LOGIN CARD
+===================================================== */
+
+.auth-card {
+
+  width: min(440px, 100%);
+}
+
+
+/* =====================================================
+   MOBILE BRAND
+===================================================== */
+
+.mobile-brand {
+
+  display: none;
+
+  margin-bottom: 38px;
+}
+
+
+.mobile-brand .brand-logo-wrap {
+
+  background: #f0efff;
+
+  border-color: #e5e3ff;
+
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.auth-card h2 {
+
+  margin:
+    10px 0 8px;
+
+  font-size: 34px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.7px;
+}
+
+
+.muted {
+
+  color: #7e8090;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   ROLE TABS
+===================================================== */
+
+.role-tabs {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin: 25px 0;
+}
+
+
+.role-tab {
+
+  border:
+    1px solid
+    #e4e4ec;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    0.2s ease;
+}
+
+
+.role-tab:hover {
+
+  transform:
+    translateY(-2px);
+
+  border-color:
+    #bbb8ff;
+}
+
+
+.role-tab span {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 23px;
+}
+
+
+.role-tab b {
+
+  display: block;
+
+  font-size: 13px;
+}
+
+
+.role-tab small {
+
+  display: block;
+
+  margin-top: 3px;
+
+  color: #898a98;
+
+  font-size: 9px;
+}
+
+
+.role-tab.active {
+
+  border-color:
+    #6863e9;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3f2ff,
+      #fafaff
+    );
+
+  box-shadow:
+    0 10px 30px
+    rgba(91,87,223,0.10);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.auth-card form > label {
+
+  display: block;
+
+  margin: 14px 0;
+
+  font-size: 11px;
+
+  font-weight: 750;
+}
+
+
+.auth-card input[type="text"],
+.auth-card input[type="password"] {
+
+  width: 100%;
+
+  margin-top: 7px;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid
+    #dedee8;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #181927;
+
+  transition:
+    0.2s ease;
+}
+
+
+.auth-card input:focus {
+
+  border-color:
+    #6b66ed;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(107,102,237,0.10);
+}
+
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+.password-wrap {
+
+  position: relative;
+}
+
+
+.password-wrap input {
+
+  padding-right: 65px !important;
+}
+
+
+.password-wrap button {
+
+  position: absolute;
+
+  right: 9px;
+
+  top: 14px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #5d58d5;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   FORM ROW
+===================================================== */
+
+.form-row {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin:
+    13px 0 16px;
+
+  color: #777989;
+
+  font-size: 10px;
+}
+
+
+.check {
+
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0 !important;
+
+  font-weight: 500 !important;
+}
+
+
+.check input {
+
+  accent-color: #5b57df;
+}
+
+
+.text-link {
+
+  border: 0;
+
+  background: transparent;
+
+  color: #5b57df;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.form-error {
+
+  min-height: 16px;
+
+  margin-bottom: 7px;
+
+  color: #d43c4b;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.primary-btn {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #625de5,
+      #504bd0
+    );
+
+  color: white;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 28px
+    rgba(91,87,223,0.22);
+
+  transition:
+    0.2s ease;
+}
+
+
+.primary-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 16px 32px
+    rgba(91,87,223,0.28);
+}
+
+
+.primary-btn span {
+
+  float: right;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   DEMO NOTE
+===================================================== */
+
+.demo-note {
+
+  margin-top: 17px;
+
+  padding: 14px;
+
+  border:
+    1px solid
+    #e9e9f0;
+
+  border-radius: 13px;
+
+  background: #f8f8fb;
+
+  color: #77798a;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.demo-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 4px;
+
+  color: #5552c9;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+
+.demo-title span {
+
+  font-size: 8px;
+}
+
+
+.demo-note p {
+
+  margin-bottom: 10px;
+}
+
+
+.demo-account {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+
+.demo-account > div {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 8px;
+
+  border-radius: 9px;
+
+  background: white;
+
+  border: 1px solid #ededf2;
+}
+
+
+.demo-account strong {
+
+  width: 100%;
+
+  color: #555668;
+
+  font-size: 9px;
+}
+
+
+.demo-note code {
+
+  padding:
+    3px 6px;
+
+  border-radius: 5px;
+
+  background: #eeeeff;
+
+  color: #5651c9;
+
+  font-family:
+    Consolas,
+    monospace;
+
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.auth-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 22px;
+
+  color: #a0a1ac;
+
+  font-size: 8px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .auth-shell {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .auth-visual {
+
+    display: none;
+  }
+
+
+  .auth-panel {
+
+    min-height: 100vh;
+
+    padding: 25px;
+  }
+
+
+  .mobile-brand {
+
+    display: flex;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .auth-panel {
+
+    padding: 20px 16px;
+  }
+
+
+  .auth-card h2 {
+
+    font-size: 29px;
+  }
+
+
+  .role-tab {
+
+    padding: 13px;
+  }
+
+
+  .demo-account {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .auth-footer {
+
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+}

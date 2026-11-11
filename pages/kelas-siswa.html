@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelas & Siswa | SKORIN</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-role="guru" data-page="siswa">
+  <aside class="sidebar" id="sidebar" aria-label="Menu utama"></aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div>
+        <div class="crumb">AKADEMIK / KELAS</div>
+        <h1>Kelas &amp; Siswa</h1>
+      </div>
+    </header>
+    <section class="content">
+      <div class="hero">
+        <div>
+          <h2>XII-A • Informatika</h2>
+          <p>Kelola daftar siswa: tambah, cari, hapus, lalu lanjut ke input nilai.</p>
+        </div>
+        <div class="toolbar">
+          <button class="secondary" type="button" id="resetData">Reset data demo</button>
+          <button class="primary" type="button" id="openAdd">+ Tambah Siswa</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="toolbar">
+          <label class="sr-only" for="q">Cari nama siswa</label>
+          <input class="input" id="q" type="search" placeholder="Cari nama siswa...">
+          <span class="muted" id="countInfo"></span>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th scope="col">Siswa</th><th scope="col">Nilai Akhir</th><th scope="col">Predikat</th><th scope="col">Status</th><th scope="col">Risiko</th><th scope="col">Aksi</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+      <dialog id="addDialog" aria-labelledby="addTitle">
+        <form id="addForm" novalidate>
+          <h3 id="addTitle">Tambah siswa</h3>
+          <div class="field"><label>Nama lengkap<input id="newName" type="text" maxlength="40" required></label></div>
+          <p class="form-error" id="addError" role="alert"></p>
+          <div class="dialog-actions">
+            <button class="secondary" type="button" id="cancelAdd">Batal</button>
+            <button class="primary" type="submit">Simpan</button>
+          </div>
+        </form>
+      </dialog>
+    </section>
+  </main>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/kelas-siswa.js"></script>
+</body>
+</html>

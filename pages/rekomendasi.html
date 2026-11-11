@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rekomendasi | SKORIN</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-role="guru" data-page="rekomendasi">
+  <aside class="sidebar" id="sidebar" aria-label="Menu utama"></aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div>
+        <div class="crumb">INSIGHT / REKOMENDASI</div>
+        <h1>Rekomendasi Tindakan</h1>
+      </div>
+    </header>
+    <section class="content">
+      <div class="hero">
+        <div>
+          <h2>Dari data menjadi tindakan nyata.</h2>
+          <p>Rekomendasi dibuat otomatis dari nilai siswa: remedial untuk yang di bawah KKM, pengayaan untuk yang unggul, dan strategi kelas dari komponen terlemah.</p>
+        </div>
+      </div>
+      <div class="recommend" id="recommend"></div>
+      <div class="insight" id="mainRec">
+        <div class="spark">✓</div>
+        <div><b>Rekomendasi utama</b><p id="mainRecText"></p></div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/rekomendasi.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analisis | SKORIN</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-role="guru" data-page="analisis">
+  <aside class="sidebar" id="sidebar" aria-label="Menu utama"></aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div>
+        <div class="crumb">INSIGHT / ANALISIS</div>
+        <h1>Analisis Nilai Kelas</h1>
+      </div>
+    </header>
+    <section class="content">
+      <div class="stats">
+      <div class="card"><div class="stat-head"><span>Rata-rata</span><i class="stat-icon">◉</i></div><h3 id="statAvg">–</h3><p>dari siswa yang sudah dinilai</p></div>
+      <div class="card"><div class="stat-head"><span>Tuntas</span><i class="stat-icon">✓</i></div><h3 id="statTuntas">–</h3><p id="statTuntasNote"></p></div>
+      <div class="card"><div class="stat-head"><span>Predikat A</span><i class="stat-icon">A</i></div><h3 id="statA">–</h3><p>siswa</p></div>
+      <div class="card"><div class="stat-head"><span>Intervensi</span><i class="stat-icon">!</i></div><h3 id="statRisk">–</h3><p>siswa di bawah KKM</p></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>Distribusi Predikat</h3><p>Gambaran hasil belajar kelas XII-A</p></div></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th scope="col">Predikat</th><th scope="col">Rentang</th><th scope="col">Jumlah</th><th scope="col">Persentase</th><th scope="col">Interpretasi</th></tr></thead>
+            <tbody id="distBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>Rata-rata per Komponen</h3><p>Komponen mana yang paling lemah di kelas</p></div></div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th scope="col">Komponen</th><th scope="col">Bobot</th><th scope="col">Rata-rata</th><th scope="col">Grafik</th></tr></thead>
+            <tbody id="compBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="insight">
+        <div class="spark">✦</div>
+        <div><b>Temuan utama</b><p id="insightText"></p></div>
+        <a class="btn-link" href="rekomendasi.html">Buat Rekomendasi →</a>
+      </div>
+    </section>
+  </main>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/analisis.js"></script>
+</body>
+</html>

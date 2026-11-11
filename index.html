@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SKORIN — Smart Academic Performance</title>
+
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body class="auth-body">
+
+  <div class="auth-shell">
+
+    <!-- =========================
+         LEFT / VISUAL AREA
+    ========================== -->
+    <section class="auth-visual">
+
+      <div class="brand">
+
+        <div class="brand-logo-wrap">
+          <img
+            src="thanks.png"
+            alt="Logo SKORIN"
+            class="brand-logo"
+          >
+        </div>
+
+        <div class="brand-text">
+          <b>SKORIN</b>
+          <small>Smart Academic Performance</small>
+        </div>
+
+      </div>
+
+
+      <div class="visual-copy">
+
+        <span class="eyebrow">
+          SMARTER SCHOOL • BETTER LEARNING
+        </span>
+
+        <h1>
+          Nilai bukan cuma angka.
+          <br>
+
+          <em>
+            Jadikan data sebagai arah belajar.
+          </em>
+        </h1>
+
+      
+
+      </div>
+
+
+      <!-- Statistik dummy -->
+      <div class="mini-insights">
+
+        <div class="mini-card">
+          <b id="miniTuntas">—</b>
+          <span>ketuntasan kelas</span>
+        </div>
+
+        <div class="mini-card">
+          <b id="miniRata">—</b>
+          <span>rata-rata kelas</span>
+        </div>
+
+        <div class="mini-card">
+          <b id="miniPerhatian">—</b>
+          <span>perlu perhatian</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RIGHT / LOGIN AREA
+    ========================== -->
+    <section class="auth-panel">
+
+      <div class="auth-card">
+
+
+        <!-- Mobile Brand -->
+        <div class="mobile-brand brand">
+
+          <div class="brand-logo-wrap">
+            <img
+              src="thanks.png"
+              alt="Logo SKORIN"
+              class="brand-logo"
+            >
+          </div>
+
+          <div class="brand-text">
+            <b>SKORIN</b>
+            <small>Smart Academic Performance</small>
+          </div>
+
+        </div>
+
+
+        <span class="eyebrow">
+          SELAMAT DATANG
+        </span>
+
+
+        <h2>
+          Masuk ke ruang belajar.
+        </h2>
+
+
+        <p class="muted">
+          Pilih peranmu dan mulai kelola perjalanan akademik.
+        </p>
+
+
+        <!-- =========================
+             ROLE SELECTOR
+        ========================== -->
+
+        <div class="role-tabs">
+
+          <button
+            class="role-tab active"
+            type="button"
+            data-role="guru"
+            aria-pressed="true"
+          >
+
+            <span aria-hidden="true">
+              👨‍🏫
+            </span>
+
+            <b>Guru</b>
+
+            <small>
+              Kelola &amp; analisis kelas
+            </small>
+
+          </button>
+
+
+          <button
+            class="role-tab"
+            type="button"
+            data-role="murid"
+            aria-pressed="false"
+          >
+
+            <span aria-hidden="true">
+              🎓
+            </span>
+
+            <b>Murid</b>
+
+            <small>
+              Pantau progres belajar
+            </small>
+
+          </button>
+
+        </div>
+
+
+        <!-- =========================
+             LOGIN FORM
+        ========================== -->
+
+        <form id="loginForm">
+
+          <label>
+            Nama pengguna
+
+            <input
+              id="username"
+              type="text"
+              placeholder="Contoh: guru01"
+              autocomplete="username"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Kata sandi
+
+            <div class="password-wrap">
+
+              <input
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                id="togglePass"
+              >
+                Lihat
+              </button>
+
+            </div>
+
+          </label>
+
+
+          <div class="form-row">
+
+            <label class="check">
+
+              <input
+                type="checkbox"
+                id="remember"
+                checked
+              >
+
+              Ingat saya
+
+            </label>
+
+
+            <button
+              type="button"
+              class="text-link"
+              id="forgot"
+            >
+              Lupa akses?
+            </button>
+
+          </div>
+
+
+          <p
+            id="loginMsg"
+            class="form-error"
+            role="alert"
+          ></p>
+
+
+          <button
+            class="primary-btn"
+            type="submit"
+          >
+
+            Masuk ke SKORIN
+
+            <span aria-hidden="true">
+              →
+            </span>
+
+          </button>
+
+        </form>
+
+
+        <!-- =========================
+             DEMO ACCOUNT
+        ========================== -->
+
+        <div class="demo-note">
+
+          <div class="demo-title">
+            <span>●</span>
+            MODE DEMO
+          </div>
+
+          <p>
+            Gunakan akun berikut untuk mencoba sistem.
+          </p>
+
+          <div class="demo-account">
+
+            <div>
+              <strong>Guru</strong>
+
+              <code>guru01</code>
+
+              <code>guru123</code>
+            </div>
+
+            <div>
+              <strong>Murid</strong>
+
+              <code>murid01</code>
+
+              <code>murid123</code>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="auth-footer">
+
+          <span>
+            SKORIN © 2026
+          </span>
+
+          <span>
+            Smart Academic Performance
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+
+</body>
+</html>
